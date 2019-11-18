@@ -1,0 +1,36 @@
+<html>
+<head>
+    <script type="text/javascript" src="jquery.min.js"></script>
+
+    <script>
+        function goFront() {
+            $.get("http://192.168.1.99/status1=0",
+                function (data) {
+                    alert("Data Loaded: " + data);
+                });
+        }
+
+        function goLeft() {
+            $.get("http://192.168.1.99/status1=1",
+                function (data) {
+                    alert("Data Loaded: " + data);
+                });
+        }
+
+    </script>
+</head>
+<body>
+    <table style="width:100%;">
+        <caption>
+            <h1><strong>WEB BASED - LED CONTROL</strong></h1>
+        </caption>
+        <tr>
+            <td class="auto-style1">
+                <input height="325px" onclick="goFront();" src="images/lightbulb_On.ico" type="image" width="325px" />
+            </td>
+            <td rowspan="3">
+                <input height="325px" onclick="goLeft();" src="images/lightbulb_Off.ico" type="image" width="325px" />
+            </td>
+    </table>
+</body>
+</html>
